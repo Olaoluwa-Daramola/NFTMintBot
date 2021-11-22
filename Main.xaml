@@ -1,0 +1,550 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1104,6292.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="28">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="478.4,440" sap2010:WorkflowViewState.IdRef="Sequence_10">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="sd:DataTable" Name="dtMintingGuide" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,347.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence DisplayName="Mint NFTs" sap:VirtualizedContainerService.HintSize="716.8,5904" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="strCollectionName" />
+            <Variable x:TypeArguments="ui:Browser" Name="UI_Browser" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="675.2,60" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;Mint your NFTs and put them up for sale on Open Sea using using UiPath&quot;]" />
+          <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Edge" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="675.2,217.6" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" UiBrowser="[UI_Browser]" Url="https://opensea.io">
+            <ui:OpenBrowser.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="241.6,115.2" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MaximizeWindow Window="{x:Null}" DisplayName="Maximize Window" sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="MaximizeWindow_1" />
+                </Sequence>
+              </ActivityAction>
+            </ui:OpenBrowser.Body>
+          </ui:OpenBrowser>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="675.2,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Read Minting Guide Document&quot;]" />
+          <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="675.2,262.4" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" Visible="False" WorkbookPath="C:\Users\SX168ZS\Desktop\RPA Projects\NFT\MintingGuide.xlsx">
+            <ui:ExcelApplicationScope.Body>
+              <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="375.2,152.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:ExcelReadRange AddHeaders="True" DataTable="[dtMintingGuide]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="333.6,60" sap2010:WorkflowViewState.IdRef="ExcelReadRange_1" SheetName="Sheet1">
+                    <ui:ExcelReadRange.Range>
+                      <InArgument x:TypeArguments="x:String">
+                        <Literal x:TypeArguments="x:String" Value="" />
+                      </InArgument>
+                    </ui:ExcelReadRange.Range>
+                  </ui:ExcelReadRange>
+                </Sequence>
+              </ActivityAction>
+            </ui:ExcelApplicationScope.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ExcelApplicationScope>
+          <ui:FilterDataTable DataTable="[dtMintingGuide]" DisplayName="Filter Data Table - Remove Minted" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="675.2,162.4" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dtMintingGuide]" SelectColumnsMode="Keep">
+            <ui:FilterDataTable.Filters>
+              <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+                  <ui:FilterOperationArgument.Column>
+                    <InArgument x:TypeArguments="x:String">["Status"]</InArgument>
+                  </ui:FilterOperationArgument.Column>
+                  <ui:FilterOperationArgument.Operand>
+                    <InArgument x:TypeArguments="x:String">["Minted"]</InArgument>
+                  </ui:FilterOperationArgument.Operand>
+                </ui:FilterOperationArgument>
+              </scg:List>
+            </ui:FilterDataTable.Filters>
+            <ui:FilterDataTable.SelectColumns>
+              <scg:List x:TypeArguments="InArgument" Capacity="4">
+                <x:Null />
+              </scg:List>
+            </ui:FilterDataTable.SelectColumns>
+          </ui:FilterDataTable>
+          <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="675.2,60" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[&quot;Log into Open Sea and MetaMask and ensure the collection you want to mint into is already created&quot;]" />
+          <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" DisplayName="Input Dialog" sap:VirtualizedContainerService.HintSize="675.2,241.6" sap2010:WorkflowViewState.IdRef="InputDialog_2" IsPassword="False" Label="Please Enter The Name of The collection you want to mint art into" Title="NFT Minting ">
+            <ui:InputDialog.Result>
+              <OutArgument x:TypeArguments="x:String">[strCollectionName]</OutArgument>
+            </ui:InputDialog.Result>
+          </ui:InputDialog>
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dtMintingGuide]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="675.2,4434.4" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+            <ui:ForEachRow.Body>
+              <ActivityAction x:TypeArguments="sd:DataRow">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="641.6,4313.6" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                  <Sequence.Variables>
+                    <Variable x:TypeArguments="x:Int32" Name="intId" />
+                    <Variable x:TypeArguments="x:String" Name="strCollectableName" />
+                    <Variable x:TypeArguments="x:String" Name="strPathToCollectable" />
+                    <Variable x:TypeArguments="x:String" Name="strDescription" />
+                    <Variable x:TypeArguments="x:String" Name="strSupply" />
+                    <Variable x:TypeArguments="x:Decimal" Name="decPrice" />
+                    <Variable x:TypeArguments="x:String" Default="NumbersxRobot - Collection | OpenSea" Name="strOpenseatitle" />
+                  </Sequence.Variables>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:MultipleAssign DisplayName="Assign Minting Parameters" sap:VirtualizedContainerService.HintSize="600,286.4" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                    <ui:MultipleAssign.AssignOperations>
+                      <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Int32">[intId]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Int32">[cint(row("s/n"))]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[strCollectableName]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[row("CollectableName").ToString]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[strPathToCollectable]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[row("LocalPathToCollectable").ToString]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[strDescription]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">["Number "+intId.ToString+" minted by UiPath at "+DateTime.Now.ToString("dd-MM-yyyy HH:mm:ss")]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[strSupply]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String">[row("Supply").ToString]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_6">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:Decimal">[decPrice]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:Decimal">[Convert.ToDecimal(row("Price"))]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                        <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
+                          <ui:AssignOperation.To>
+                            <OutArgument x:TypeArguments="x:String">[strOpenseatitle]</OutArgument>
+                          </ui:AssignOperation.To>
+                          <ui:AssignOperation.Value>
+                            <InArgument x:TypeArguments="x:String" xml:space="preserve">[strCollectionName+"  - Collection | OpenSea"]</InArgument>
+                          </ui:AssignOperation.Value>
+                        </ui:AssignOperation>
+                      </scg:List>
+                    </ui:MultipleAssign.AssignOperations>
+                  </ui:MultipleAssign>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="600,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Opening Edge Browser&quot;]" />
+                  <ui:BrowserScope SearchScope="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" Browser="[UI_Browser]" BrowserType="Edge" DisplayName="Attach Browser 'msedge.exe My'" sap:VirtualizedContainerService.HintSize="600,3761.6" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="6c8470c0a84ed6789fa6024b5511e830">
+                    <ui:BrowserScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="566.4,3614.4" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="524.8,60" sap2010:WorkflowViewState.IdRef="NavigateTo_2" Url="[&quot;https://opensea.io/collection/&quot;+strCollectionName.ToLower]" />
+                          <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="524.8,22.4" sap2010:WorkflowViewState.IdRef="Delay_5" />
+                          <Sequence DisplayName="Basic" sap:VirtualizedContainerService.HintSize="524.8,3359.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <Sequence.Variables>
+                              <Variable x:TypeArguments="x:Boolean" Name="boolSignExists" />
+                            </Sequence.Variables>
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Add Item.'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="31" OffsetY="26" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c2259654-efd8-4bbf-b32f-c94fbd1d6119" InformativeScreenshot="f7820dd986add8113bbe01cf038232e0" Selector="&lt;html app='msedge.exe' title='NumbersxRobot - Collection | OpenSea' /&gt;&lt;webctrl aaname='Add item' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <Delay Duration="00:00:05" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                            <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image placeholder" sap:VirtualizedContainerService.HintSize="483.2,156" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                              <ui:ClickImage.CursorPosition>
+                                <ui:CursorPosition Position="Center">
+                                  <ui:CursorPosition.OffsetX>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetX>
+                                  <ui:CursorPosition.OffsetY>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:CursorPosition.OffsetY>
+                                </ui:CursorPosition>
+                              </ui:ClickImage.CursorPosition>
+                              <ui:ClickImage.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                              </ui:ClickImage.Image>
+                              <ui:ClickImage.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="5a545ebd-2d2e-47e8-90f7-cfc8d1185a83">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ClickImage.Target>
+                            </ui:ClickImage>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'Edit'" EmptyField="False" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_12" SendWindowMessages="False" SimulateType="False" Text="[strPathToCollectable]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="915cfa6f-32df-4996-9f44-a9dfa84b3355" InformativeScreenshot="8778371a4022499ff2cb283312f7db9e" Selector="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;&lt;wnd ctrlid='1148' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="33" OffsetY="11" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ddbabba8-67a6-43b3-867c-364d46cef3f1" InformativeScreenshot="9147db30905a9ccd6cfd5cffa83412d1" Selector="&lt;wnd app='msedge.exe' cls='#32770' title='Open' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Open' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'INPUT  name'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="182" OffsetY="35" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2cfb8fdf-1e54-4f39-b4cc-1764b1809362" InformativeScreenshot="9eb1bb369e31d26f40ad52cc7da6f692" Selector="&lt;html app='msedge.exe' title='Create NFTs | OpenSea' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  name'" EmptyField="False" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_13" SendWindowMessages="False" SimulateType="True" Text="[strCollectableName]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="7f1924f4-9320-41e4-889f-bf8b509ad118" InformativeScreenshot="5d46d6ceb1f6af94e771c757b3ca3ae0" Selector="&lt;html app='msedge.exe' title='Create NFTs | OpenSea' /&gt;&lt;webctrl tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'TEXTAREA  description'" EmptyField="False" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_14" SendWindowMessages="False" SimulateType="True" Text="[strDescription]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ad1800a7-c608-4ff8-85e5-e2c0aec74eeb" InformativeScreenshot="cdd8879a715a43ed3de3e1b6fb580b0e" Selector="&lt;html app='msedge.exe' title='Create NFTs | OpenSea' /&gt;&lt;webctrl tag='TEXTAREA' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'INPUT  supply'" EmptyField="False" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_15" SendWindowMessages="False" SimulateType="True" Text="[strSupply]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="0c6bcfad-677f-4cb6-8c12-0b1294f7d4b8" InformativeScreenshot="a3a16042691d6e680a115d0378fd63b8" Selector="&lt;html app='msedge.exe' title='Create NFTs | OpenSea' /&gt;&lt;webctrl id='supply' tag='INPUT' type='text' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Create BUTTON'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="71" OffsetY="15" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="112ee372-532e-46ad-b4ef-d1cb6f548666" InformativeScreenshot="f4d0c41505b2dab1fe096df6095f890f" Selector="&lt;html app='msedge.exe' title='Create NFTs | OpenSea' /&gt;&lt;webctrl aaname='Create' tag='BUTTON' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_3" />
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'close'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="10" OffsetY="9" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3fbf4c7c-1fb7-46f7-893c-6566b5c7287f" InformativeScreenshot="629fca3bcddf43bd08814bb251f6aed3" Selector="&lt;html app='msedge.exe' title='*' /&gt;&lt;webctrl aaname='close' tag='I' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="483.2,22.4" sap2010:WorkflowViewState.IdRef="Delay_4" />
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Sell '" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="69" OffsetY="20" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="e4d6b703-e5b9-4744-b685-7de1d97f8d58" InformativeScreenshot="cc94a284fd5d9c721e981732ee07aff7" Selector="&lt;html app='msedge.exe' title='*' /&gt;&lt;webctrl aaname='Sell' tag='A' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:TypeInto AlterIfDisabled="{x:Null}" ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" DisplayName="Type Into 'Amount'" EmptyField="False" sap:VirtualizedContainerService.HintSize="483.2,135.2" sap2010:WorkflowViewState.IdRef="TypeInto_16" SendWindowMessages="False" SimulateType="True" Text="[decPrice.ToString]">
+                              <ui:TypeInto.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3b2c3a47-78d2-46e2-9814-429084206e8e" InformativeScreenshot="b73c1da2792d24e1b0c33e8ebcf4ab8e" Selector="&lt;html app='msedge.exe' title='List item | OpenSea' /&gt;&lt;webctrl name='price' tag='INPUT' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:TypeInto.Target>
+                            </ui:TypeInto>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="97" OffsetY="26" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="b9bc9ff9-e67f-4b45-9be1-cc2f0faf355c" InformativeScreenshot="42c464b36c379921a6615bdbf5715ab6" Selector="&lt;html app='msedge.exe' title='List item | OpenSea' /&gt;&lt;webctrl tag='BUTTON' type='submit' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'BUTTON'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="18" OffsetY="17" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="25477f63-e9d3-44df-921b-deedc71bcd53" InformativeScreenshot="a84e29b5ae729f915e971d5ed237dc92" Selector="&lt;html app='msedge.exe' title='List item | OpenSea' /&gt;&lt;webctrl aaname='Sign' tag='BUTTON' type='button' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:ImageFound DisplayName="Does Sale need to be signed " Found="[boolSignExists]" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="ImageFound_1">
+                              <ui:ImageFound.Image>
+                                <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="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" />
+                              </ui:ImageFound.Image>
+                              <ui:ImageFound.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3851d5c2-c37b-472c-bc3f-8c0cdf65479b" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='MetaMask Notification' /&gt;">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                  <ui:Target.WaitForReady>
+                                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                                  </ui:Target.WaitForReady>
+                                </ui:Target>
+                              </ui:ImageFound.Target>
+                            </ui:ImageFound>
+                            <If Condition="[boolSignExists]" sap:VirtualizedContainerService.HintSize="483.2,335.2" sap2010:WorkflowViewState.IdRef="If_1">
+                              <If.Then>
+                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Sign 'MetaMask'" sap:VirtualizedContainerService.HintSize="333.6,156" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                  <ui:ClickImage.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:ClickImage.CursorPosition>
+                                  <ui:ClickImage.Image>
+                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKwAAABFCAYAAADXeg2SAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAVPSURBVHhe7Z29axRBGIcXtBGxUERF/Qss/Tv8IywtbcRKUPG7s7BMJZYWgiKCWFkHRIgmSBBBiUQ4xYgRImOeyc3efszuzX7cZuL9XngsLpvkzPvs3LvvzM4mRqHYQzGIsCvf/phHb76byy++mnMPP5kz9z+Yo7eWzYGr78z+K0tmn9gTkCtyRu7IIbkkp+SWHA8RMxP26fJPc+HJF3Pq7oo5cnPZnL63Yg7feO/9Q4i9Czklt+SYXJNzcj+r6FVYzjLOOM7Ak9tv/tB1CTpvkHNyjwO40PfI24uwb9c2zfnHn83Ba+/MsdvL3v+ImD9wASdwA0f6iE7C/tj8ay4+W7NvSh/3ogrcwBFcwZku0VpYCm2G/RN3NKKKMHAFZ3CnbbQSlsL6uEQVLcEdHGoTjYSlgD77YNUW1b43IkQoOIRLTS/KgoV9/fGXHc515S/6ApdwCrdCI0jYlx82bMPY90uF6Apu4VhITBUW+yWrmDU4FjLS1gpLfcGQ7fsFQvQNrk2raWuFpShWzSqGAtdwri4qhaXtoG6AGBqcq2t5eYWlsas+q9gtcK9qcqEkLFNnqlvFboODvmnckrDM92q6Vew2OIiLxcgJy4oaFin4foAQQ4OLxVVeOWFZBqZVVyIWcBEns5EKS/9Lo6uIDZzM9mZTYVkdrsXXIjZwEjddpMKqMyBiBTddWGG5aUyTBCJWcNPd2GiFZWZBU7AiVnDTzX5ZYbk913egELGAo1ZYrsC4p9x3kBCxgKO4mjBny0YIvoPmmucbZmTP6Uz83jCX0mPWzKvfvLhpFrLfJ2YCjuJqQstAkwUFFndmV0ara5PXnMCptCOzZI/aMq+ej48RMwNHcTVhfyTfAfPLeOTMjaYiBnA1YVMv3xfnFwkbK7iaaMKgzMJ62Ee9Pa4ktqttJ7G0WD720urW9gvb9W+xVtaJUgmuJrrB0IerT7ejRqCSsE6+9VHmOP/P2hGWyJ4Y42Nz3y8cuJpof9YacqNfuRuQF7aulBiL6BGW0Td3rL3g04WcD1xNfF8QRSYf89nOQU7Ysdy5zkKGypIgc4xl3KEoiSwsGmGDcdJOJMtJOEU0K6iE7YQdYVXDhrMj2eTjWiPssNgaVl0CD4sb3hqyVthWNayEbYLtEqgPW2AsDJGTxr2euYIvjprVXYItMyrILGGbY/uwmunyUe6lEkWJSsJait+7MyKrJOiOnenSWoIhqCsXRAjpWgKt1uqTkVnwjYxTLsjEdNLVWloP2xeTGa28mOULLtGcdD0sf0vdcdAjmYu2NDTV2pn0jgP+0T1dImZK93TprlkRM6W7ZglNIIhYwU0XqbC0DLTzi4iNyp1fuALT3loiNir31iK0e6GICVys3L2Q0P6wIiZwsXZ/WEI7cIsYCNqBm9AzDkQM4GDQMw4I5mz1FBmxWzR6iowLZhY0mSCGBufcrJYvKoUl9CREMSS41vpJiAT9L9WzYihwLdtz9UWtsISe5i2GAMc6P83bBc+yl7RiVuAWjoVEkLAE9jNkq6YVfYFLOBUysroIFpagvqAoVvdAdAWHcGlazVqMRsK6oO2gPq1oC+7Uta7qopWwBI1dhnNN44pQcAVnqiYFQqK1sARTZ8z3skhBq7xEFbiBI7jim25tEp2EdcGKGpaB8aa0CFw4cAEncKO46qpt9CKsCwpoVocz7FNUq6Mwf5Bzco8DuND0ompa9CpsNrhpjMKa23O5p5yNEFQ2/H+QU3JLjsk1OXc3DM4iZiZsNjjLKLQ549gfiU29OANpGGt/2r0DuSJn5I4ckktySm77HkmrYhBhFYp+wph/Hyx5SMEYd0YAAAAASUVORK5CYII=" />
+                                  </ui:ClickImage.Image>
+                                  <ui:ClickImage.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="5fc5d4eb-0c00-402d-bf61-8ef6c0b61045" Selector="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='MetaMask Notification' /&gt;">
+                                      <ui:Target.TimeoutMS>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:Target.TimeoutMS>
+                                      <ui:Target.WaitForReady>
+                                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                                      </ui:Target.WaitForReady>
+                                    </ui:Target>
+                                  </ui:ClickImage.Target>
+                                </ui:ClickImage>
+                              </If.Then>
+                            </If>
+                            <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'x'" sap:VirtualizedContainerService.HintSize="483.2,107.2" sap2010:WorkflowViewState.IdRef="Click_25" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click.CursorPosition>
+                                <ui:CursorPosition OffsetX="10" OffsetY="21" Position="TopLeft" />
+                              </ui:Click.CursorPosition>
+                              <ui:Click.Target>
+                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a3dce46c-2672-4512-9996-49b09cc1ee01" InformativeScreenshot="ff04ca9a22964978cc2b67aae63f3f50" Selector="&lt;html app='msedge.exe' title='List item | OpenSea' /&gt;&lt;webctrl aaname='close' tag='I' /&gt;" WaitForReady="COMPLETE">
+                                  <ui:Target.TimeoutMS>
+                                    <InArgument x:TypeArguments="x:Int32" />
+                                  </ui:Target.TimeoutMS>
+                                </ui:Target>
+                              </ui:Click.Target>
+                            </ui:Click>
+                            <ui:NavigateTo Browser="{x:Null}" DisplayName="Navigate To" sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="NavigateTo_1" Url="[&quot;https://opensea.io/collection/&quot;+strCollectionName]" />
+                            <Assign DisplayName="Assign Minted to Status" sap:VirtualizedContainerService.HintSize="483.2,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:Object">[row("Status")]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:Object">["Minted"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                          </Sequence>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:BrowserScope.Body>
+                  </ui:BrowserScope>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEachRow.Body>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:ForEachRow>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="333.6,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Error Occured&quot;]" />
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <ui:WriteRange AddHeaders="False" DataTable="[dtMintingGuide]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="333.6,116" sap2010:WorkflowViewState.IdRef="WriteRange_2" SheetName="Sheet1" StartingCell="A1" WorkbookPath="C:\Users\SX168ZS\Desktop\RPA Projects\NFT\MintingGuide.xlsx" />
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
